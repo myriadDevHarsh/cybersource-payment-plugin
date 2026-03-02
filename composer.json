@@ -1,0 +1,14 @@
+{
+  "name": "plugin/nab-woocommerce-gateway",
+  "type": "project",
+  "require": {
+    "php": ">=8.0.0", 
+    "cybersource/rest-client-php": "0.0.70"
+  },
+  "autoload": {
+    "psr-4": {
+      "NabGateway\\": "includes/",
+      "scr\\": "scr/"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+jQuery(function ($) {
+
+  let unifiedInstance = null;
+  let jwtLoaded = false;
+
+  async function loadUnifiedCheckout(jwt) {
+
+    if (unifiedInstance) {
+      console.log('Unified already initialized');
+      return;
+    }
+
+    const jwtParts = jwt.split('.');
+    const jwtPayload = JSON.parse(atob(jwtParts[1]));
+
+    const clientLibrary = jwtPayload.ctx[0].data.clientLibrary;
+    const clientLibraryIntegrity = jwtPayload.ctx[0].data.clientLibraryIntegrity;
+
+    if (!document.querySelector(`script[src="${clientLibrary}"]`)) {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = clientLibrary;
+      script.integrity = clientLibraryIntegrity;
+      script.crossOrigin = "anonymous";
+      document.head.appendChild(script);
+
+      await new Promise(resolve => {
+        script.onload = resolve;
+      });
+    }
+
+    try {
+      const accept = await Accept(jwt);
+      const up = await accept.unifiedPayments(true);
+
+      const tt = await up.show({
+        containers: {
+          paymentSelection: "#nab-card-container"
+        }
+      });
+
+      const completeResponse = await up.complete(tt);
+      console.log(completeResponse);
+      alert(123);
+
+      unifiedInstance = up;
+      jwtLoaded = true;
+
+    } catch (error) {
+      console.error("Unified Checkout error:", error);
+    }
+  }
+
+  function getCaptureContext() {
+
+    if (jwtLoaded) {
+      console.log('JWT already fetched');
+      return Promise.resolve({ success: true });
+    }
+    return $.ajax({
+      url: nab_ajax.ajax_url,
+      type: 'POST',
+      dataType: 'json',
+      data: {
+        action: 'nab_get_capture_context',
+        security: nab_ajax.nonce,
+        order_id: nab_ajax.order_id
+      }
+    });
+  }
+
+  async function initNabGateway() {
+
+    if (unifiedInstance) {
+      return;
+    }
+
+    try {
+      const response = await getCaptureContext();
+
+      if (!response.success || !response.data?.jwt) {
+        console.error(response.data?.message || 'JWT error');
+        return;
+      }
+
+      const jwt = response.data.jwt;
+
+      if (!$('#nab-card-container').length) {
+        $('.payment_method_nab_rest')
+          .html('<div id="nab-card-container" style="margin-top:15px;"></div>');
+      }
+
+      await loadUnifiedCheckout(jwt);
+
+    } catch (error) {
+      console.error("Capture context error:", error);
+    }
+  }
+
+  initNabGateway();
+
+});

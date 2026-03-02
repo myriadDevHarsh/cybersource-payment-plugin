@@ -1,0 +1,90 @@
+*   Trying 66.185.182.49...
+* TCP_NODELAY set
+* Connected to apitest.cybersource.com (66.185.182.49) port 443 (#0)
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /home/fhsbfeaturedcom/public_html/wp-content/plugins/nab-woocommerce-gateway/vendor/cybersource/rest-client-php/lib/ssl/cacert.pem
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES256-GCM-SHA384
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=802339; C=US; ST=California; L=Foster City; O=Visa International Service Association; CN=apitest.cybersource.com
+*  start date: Jul  7 00:00:00 2025 GMT
+*  expire date: Jul  6 23:59:59 2026 GMT
+*  subjectAltName: host "apitest.cybersource.com" matched cert's "apitest.cybersource.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert EV RSA CA G2
+*  SSL certificate verify ok.
+> POST /up/v1/capture-contexts HTTP/1.1
+Host: apitest.cybersource.com
+User-Agent: Swagger-Codegen/1.0.0/php
+Accept:  application/jwt
+Content-Type:  application/json
+v-c-merchant-id: nabsandboxdemo0568001
+Signature: keyid="c8f769d5-65fe-45c2-a9e7-b951693fba46", algorithm="HmacSHA256", headers="host date request-target digest v-c-merchant-id", signature="3Da0Yb7TN27TGrxnbkImnCCAvC46hGPHnTzLuJduSEk="
+Date: Sat, 28 Feb 2026 10:46:54 GMT
+v-c-client-id: cybs-rest-sdk-php-0.0.70
+Digest:  SHA-256=eTAfKHKfHAgPPD6i66ekFrMJbvCH/HeVGVqEAYfqcyY=
+Content-Length: 1016
+
+* upload completely sent off: 1016 out of 1016 bytes
+< HTTP/1.1 201 Created
+< v-c-merchant-id: nabsandboxdemo0568001
+< v-c-session-id: ca45748d-eb9f-4c5c-b00b-3324c4a815fc
+< content-type: application/jwt
+< cache-control: no-store
+< pragma: no-cache
+< content-length: 4863
+< x-envoy-upstream-service-time: 28
+< date: Sat, 28 Feb 2026 10:46:55 GMT
+< server: istio-envoy
+< strict-transport-security: max-age=31536000; includeSubDomains
+< Connection: keep-alive
+< v-c-correlation-id: 517464fb-e90e-4298-9c3d-bc922f690110
+< X-OPNET-Transaction-Trace: c8c508b8-c497-4e37-af4e-f8c7a2c1d1c4-1184237-16047001
+< 
+* Connection #0 to host apitest.cybersource.com left intact
+*   Trying 66.185.182.49...
+* TCP_NODELAY set
+* Connected to apitest.cybersource.com (66.185.182.49) port 443 (#0)
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /home/fhsbfeaturedcom/public_html/wp-content/plugins/nab-woocommerce-gateway/vendor/cybersource/rest-client-php/lib/ssl/cacert.pem
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES256-GCM-SHA384
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: jurisdictionC=US; jurisdictionST=Delaware; businessCategory=Private Organization; serialNumber=802339; C=US; ST=California; L=Foster City; O=Visa International Service Association; CN=apitest.cybersource.com
+*  start date: Jul  7 00:00:00 2025 GMT
+*  expire date: Jul  6 23:59:59 2026 GMT
+*  subjectAltName: host "apitest.cybersource.com" matched cert's "apitest.cybersource.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert EV RSA CA G2
+*  SSL certificate verify ok.
+> POST /up/v1/capture-contexts HTTP/1.1
+Host: apitest.cybersource.com
+User-Agent: Swagger-Codegen/1.0.0/php
+Accept:  application/jwt
+Content-Type:  application/json
+v-c-merchant-id: nabsandboxdemo0568001
+Signature: keyid="c8f769d5-65fe-45c2-a9e7-b951693fba46", algorithm="HmacSHA256", headers="host date request-target digest v-c-merchant-id", signature="6uh1T12I0fa//noRPfGlI8UJxtI/nLBPs8Fb/Eo7ftA="
+Date: Sat, 28 Feb 2026 10:50:19 GMT
+v-c-client-id: cybs-rest-sdk-php-0.0.70
+Digest:  SHA-256=eTAfKHKfHAgPPD6i66ekFrMJbvCH/HeVGVqEAYfqcyY=
+Content-Length: 1016
+
+* upload completely sent off: 1016 out of 1016 bytes
+< HTTP/1.1 201 Created
+< v-c-merchant-id: nabsandboxdemo0568001
+< v-c-session-id: 8b36b4c6-32da-44f7-acd6-ce2a6877b355
+< content-type: application/jwt
+< cache-control: no-store
+< pragma: no-cache
+< content-length: 4863
+< x-envoy-upstream-service-time: 50
+< date: Sat, 28 Feb 2026 10:50:20 GMT
+< server: istio-envoy
+< strict-transport-security: max-age=31536000; includeSubDomains
+< Connection: keep-alive
+< v-c-correlation-id: fc0bbe9c-a767-4125-8296-47ae30ee6e08
+< X-OPNET-Transaction-Trace: 23b85350-245c-47c4-9ec3-ac58eafea055-1160061-15547173
+< 
+* Connection #0 to host apitest.cybersource.com left intact

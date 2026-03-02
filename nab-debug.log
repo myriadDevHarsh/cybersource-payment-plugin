@@ -1,0 +1,917 @@
+[2026-02-17 04:33:24] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => defa4714-ea39-4aa1-8729-6e3aed728a84
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:33:25] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => c4041204-6065-43f8-a9e9-5d29e334fbd1
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:33:27] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 4df77b17-2f12-486e-86bb-9489632f53a4
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:33:28] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 9cf40fa8-2710-4e47-9e4e-e1bf9b117845
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:33:28] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => fcde1658-c1d8-48fe-960d-0173b45ff2e8
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:33:28] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 783a9c79-9591-45b1-b8c6-3f8efe4259d5
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:33:29] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 403a5a56-fb99-4d43-8884-cb5c37ad7dfe
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:33:35] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 410b9105-a4df-4b76-95c0-7952f28e242c
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:33:56] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => b17247b3-0c87-4b71-b755-cedb09c3cc42
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:33:59] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 81c2a346-ef53-4da9-bc3a-4e77c0a2d72d
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:36:22] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => f6379169-0117-42a3-9350-35236442ec38
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:36:57] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 28048d0a-88f5-4d4b-a6a5-b88c761b7cfb
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:37:00] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://nabgateway-api-test.nab.com.au/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => c9689e0d-3131-4a4b-8c92-47773d1abd84
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-17 04:56:35] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 2642f9d4-3325-4368-8c82-4ca343ff9944
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/amountDetails/totalAmount
+                            [message] => $.orderInformation.amountDetails.totalAmount: integer found, string expected
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /targetOrigins/0
+                            [message] => Invalid URL
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 05:35:06] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => b7a09e06-2d2e-414e-ab80-588389a6b923
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /data/orderInformation/shipTo/buildingNumber
+                            [message] => $.data.orderInformation.shipTo.buildingNumber: is missing but it is required
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /orderInformation/billTo/buildingNumber
+                            [message] => $.orderInformation.billTo.buildingNumber: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 05:37:22] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => edc508f7-2421-4951-99b5-696b5b4237e5
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /data/orderInformation/shipTo/buildingNumber
+                            [message] => $.data.orderInformation.shipTo.buildingNumber: is missing but it is required
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /orderInformation/billTo/buildingNumber
+                            [message] => $.orderInformation.billTo.buildingNumber: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 05:44:52] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => a1ba7405-c940-479f-b829-340be2f48710
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/shipTo/buildingNumber
+                            [message] => $.orderInformation.shipTo.buildingNumber: is missing but it is required
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /orderInformation/billTo/buildingNumber
+                            [message] => $.orderInformation.billTo.buildingNumber: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 05:53:23] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 792a5156-d8a8-48c8-9b45-5ba54913d500
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /orderInformation/shipTo/buildingNumber
+                            [message] => $.orderInformation.shipTo.buildingNumber: is missing but it is required
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /orderInformation/billTo/buildingNumber
+                            [message] => $.orderInformation.billTo.buildingNumber: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 06:02:16] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 3aa74273-29d4-4e92-91db-f27f7c8f1474
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /data/orderInformation/shipTo/buildingNumber
+                            [message] => $.data.orderInformation.shipTo.buildingNumber: is missing but it is required
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /orderInformation/billTo/buildingNumber
+                            [message] => $.orderInformation.billTo.buildingNumber: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 06:03:04] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => c1a153c2-1a49-4640-8a52-2d9187df23dd
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /data
+                            [message] => $.data: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 06:08:38] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => d6f6bf51-051a-450c-9766-fa405530bb4e
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [message] => $: should not be valid to the schema "not" : {"required":["data","orderInformation"]}
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /orderInformation/billTo/buildingNumber
+                            [message] => $.orderInformation.billTo.buildingNumber: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 06:16:32] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 5aedd244-dacd-4c56-94a7-1939fd0c162d
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [message] => $: should not be valid to the schema "not" : {"required":["data","orderInformation"]}
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 06:21:52] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => fb2769a5-e3e7-4fe9-828b-4f7191915067
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /completeMandate/type
+                            [message] => $.completeMandate.type: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 06:23:59] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => e2d9f1fb-29a8-4902-932a-84c57b1bfd25
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /completeMandate/billingType
+                            [message] => $.completeMandate.billingType: is not defined in the schema and the schema does not allow additional properties
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 06:24:30] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 5efc1866-0e21-4523-a49c-4a09574e43fc
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /completeMandate/type
+                            [message] => $.completeMandate.type: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 06:36:41] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 12f13ade-a1be-4d78-855d-2f3b442174ef
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /data/orderInformation/shipTo/buildingNumber
+                            [message] => $.data.orderInformation.shipTo.buildingNumber: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 07:07:16] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 37b63010-db01-4d19-8853-4c13adb93a07
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /data/orderInformation/shipTo/buildingNumber
+                            [message] => $.data.orderInformation.shipTo.buildingNumber: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 07:27:32] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => f8d98c02-6de5-4978-a524-397ee96f98e6
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /completeMandate/type
+                            [message] => $.completeMandate.type: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 07:36:06] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => 7ee309c7-3742-4363-99cc-597147b483d7
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /completeMandate/billingType
+                            [message] => $.completeMandate.billingType: is not defined in the schema and the schema does not allow additional properties
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-24 07:40:22] CyberSource API Exception
+Context: Array
+(
+    [message] => [400] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [correlationId] => c4662456-10b3-45b3-8562-ca730fb8ad15
+            [details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [location] => /data/orderInformation/shipTo/buildingNumber
+                            [message] => $.data.orderInformation.shipTo.buildingNumber: is missing but it is required
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [location] => /orderInformation/billTo/buildingNumber
+                            [message] => $.orderInformation.billTo.buildingNumber: is missing but it is required
+                        )
+
+                )
+
+            [informationLink] => https://developer.cybersource.com/
+            [message] => A Validation Error Occurred.
+            [reason] => UNIFIEDPAYMENTS_VALIDATION_FIELDS
+        )
+
+    [code] => 400
+)
+
+----------------------------------------
+[2026-02-28 06:29:10] CyberSource API Exception
+Context: Array
+(
+    [message] => [500] Error connecting to the API (https://apitest.cybersource.com/up/v1/capture-contexts)
+    [response] => stdClass Object
+        (
+            [message] => Config API error 500 when attempting to retrieve transactional configuration.
+        )
+
+    [code] => 500
+)
+
+----------------------------------------
