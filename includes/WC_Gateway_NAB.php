@@ -120,18 +120,7 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
 
     public function ajax_get_capture_context()
     {
-        $nonce = $_POST['security'] ?? 'NOT_SET';
-
-        $nonce_valid = wp_verify_nonce($nonce, 'nab_checkout_nonce');
-
-        if (!$nonce_valid) {
-            wp_send_json_error([
-                'message' => 'Security check failed',
-                'nonce_received' => $nonce,
-            ], 403);
-            wp_die();
-        }
-
+        check_ajax_referer('nab_checkout_nonce');
 
         $order_id = absint($_POST['order_id']) ;
 
@@ -152,7 +141,7 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
 
     public function nab_verify_payment()
     {
-        check_ajax_referer('nab_nonce', 'nab_checkout_nonce');
+        check_ajax_referer('nab_checkout_nonce');
 
         $order_id = intval($_POST['order_id']);
         $jwt = $_POST['jwt'];
@@ -204,7 +193,7 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
             'nab-checkout',
             plugin_dir_url(__FILE__) . 'js/nab-checkout.js',
             ['jquery'],
-            '1.1.1',
+            '1.1.2',
             true,
         );
         $order_id = $_GET['order_id'];

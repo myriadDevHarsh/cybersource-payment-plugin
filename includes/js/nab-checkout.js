@@ -73,7 +73,7 @@ jQuery(function ($) {
         dataType: "json",
         data: {
           action: "nab_verify_payment",
-          security: nab_ajax.nonce,
+          _ajax_nonce: nab_ajax.nonce,
           order_id: nab_ajax.order_id,
           jwt: completeResponse
         }
@@ -106,7 +106,7 @@ jQuery(function ($) {
       dataType: 'json',
       data: {
         action: 'nab_get_capture_context',
-        security: nab_ajax.nonce,
+        _ajax_nonce: nab_ajax.nonce,
         order_id: nab_ajax.order_id
       }
     });
