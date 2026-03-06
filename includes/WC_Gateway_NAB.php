@@ -230,7 +230,11 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
             "clientVersion" => "0.30",
             "targetOrigins" => [ get_site_url() ],
             "allowedCardNetworks" => ["VISA", "MASTERCARD"],
-            "allowedPaymentTypes" => ["PANENTRY"],
+            "allowedPaymentTypes" => [
+                "CLICKTOPAY",
+                "APPLEPAY",
+                "GOOGLEPAY",
+            ],
             "country" => $order->get_billing_country(),
             "locale"  => "en_" . $order->get_billing_country(),
 
