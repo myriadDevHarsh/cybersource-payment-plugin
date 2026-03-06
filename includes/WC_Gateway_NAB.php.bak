@@ -7,13 +7,6 @@ use CyberSource\ExternalConfiguration;
 use CyberSource\Api\UnifiedCheckoutCaptureContextApi;
 use CyberSource\ApiClient;
 use CyberSource\ApiException;
-use CyberSource\Api\PaymentsApi;
-use CyberSource\Model\Ptsv2paymentsClientReferenceInformation;
-use CyberSource\Model\Ptsv2paymentsOrderInformationAmountDetails;
-use CyberSource\Model\Ptsv2paymentsOrderInformationBillTo;
-use CyberSource\Model\Ptsv2paymentsOrderInformation;
-use CyberSource\Model\Ptsv2paymentsTokenInformation;
-use CyberSource\Model\CreatePaymentRequest;
 
 if (! defined('ABSPATH')) {
     exit;
@@ -120,7 +113,18 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
 
     public function ajax_get_capture_context()
     {
-        check_ajax_referer('nab_checkout_nonce');
+        $nonce = $_POST['security'] ?? 'NOT_SET';
+
+        $nonce_valid = wp_verify_nonce($nonce, 'nab_checkout_nonce');
+
+        if (!$nonce_valid) {
+            wp_send_json_error([
+                'message' => 'Security check failed',
+                'nonce_received' => $nonce,
+            ], 403);
+            wp_die();
+        }
+
 
         $order_id = absint($_POST['order_id']) ;
 
@@ -141,7 +145,7 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
 
     public function nab_verify_payment()
     {
-        check_ajax_referer('nab_checkout_nonce');
+        check_ajax_referer('nab_nonce', 'security');
 
         $order_id = intval($_POST['order_id']);
         $jwt = $_POST['jwt'];
@@ -152,21 +156,16 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
             wp_send_json_error(['message' => 'Invalid order']);
         }
         $transaction_id = '';
-        // $order->payment_complete($transaction_id);
+        $order->payment_complete( $transaction_id );
 
-        // $order->add_order_note('NAB payment captured successfully. Transaction ID: ' . $transaction_id);
+        $order->add_order_note( 'NAB payment captured successfully. Transaction ID: ' . $transaction_id );
 
-        // wc_reduce_stock_levels($order->get_id());
+        wc_reduce_stock_levels( $order->get_id() );
 
-        // WC()->cart->empty_cart();
-
-
-        $res = $this->PaymentWithFlexToken($jwt, $order);
-
-        $this->nab_log("nab payment logs", $res);
+        WC()->cart->empty_cart();
 
         wp_send_json_success([
-            'redirect' => $order->get_checkout_order_received_url(),
+          'redirect' => $order->get_checkout_order_received_url(),
         ]);
     }
 
@@ -193,7 +192,7 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
             'nab-checkout',
             plugin_dir_url(__FILE__) . 'js/nab-checkout.js',
             ['jquery'],
-            '1.1.2',
+            '1.1.0',
             true,
         );
         $order_id = $_GET['order_id'];
@@ -357,82 +356,79 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
         );
     }
 
-    private function PaymentWithFlexToken($jwt, $order)
-    {
+  private function PaymentWithFlexToken($jwt,$order_id)
+  {
 
-        $totalAmount = number_format((float) $order->get_total(), 2, '.', '');
-        $currency    = $order->get_currency();
-        $buildingNumberBill = trim($order->get_billing_address_1());
+    $order = wc_get_order($order_id);
+    $totalAmount = number_format((float) $order->get_total(), 2, '.', '');
+    $currency    = $order->get_currency();
+    $buildingNumberBill = trim($order->get_billing_address_1());
+    $buildingNumberShip = trim($order->get_shipping_address_1());
 
-        if (empty($buildingNumberBill)) {
-            $buildingNumberBill = "1";
-        }
+    if (empty($buildingNumberBill)) {
+        $buildingNumberBill = "1";
+    }
 
-        $clientReferenceInformationArr = [
-            "code" => (string) $order->get_id(),
-        ];
-        $clientReferenceInformation = new Ptsv2paymentsClientReferenceInformation($clientReferenceInformationArr);
+    $clientReferenceInformationArr = [
+        "code" => (string) $order_id,
+    ];
+    $clientReferenceInformation = new CyberSource\Model\Ptsv2paymentsClientReferenceInformation($clientReferenceInformationArr);
 
-        $orderInformationAmountDetailsArr = [
+    $orderInformationAmountDetailsArr = [
             "totalAmount" => $totalAmount,
-            "currency" => $currency,
-        ];
-        $orderInformationAmountDetails = new Ptsv2paymentsOrderInformationAmountDetails($orderInformationAmountDetailsArr);
+            "currency" => $currency
+    ];
+    $orderInformationAmountDetails = new CyberSource\Model\Ptsv2paymentsOrderInformationAmountDetails($orderInformationAmountDetailsArr);
 
 
-        $orderInformationBillToArr = [
-            "country" => $order->get_billing_country(),
-            "firstName" => $order->get_billing_first_name(),
-            "lastName" => $order->get_billing_last_name(),
-            "phoneNumber" => $order->get_billing_phone(),
-            "address1" => $order->get_billing_address_1(),
-            "address2" => $order->get_billing_address_2(),
-            "postalCode" => $order->get_billing_postcode(),
-            "locality" => $order->get_billing_city(),
-            "administrativeArea" => $order->get_billing_state(),
-            "buildingNumber" => $buildingNumberBill,
-            "email" => $order->get_billing_email(),
-        ];
-        $orderInformationBillTo = new Ptsv2paymentsOrderInformationBillTo($orderInformationBillToArr);
+    $orderInformationBillToArr = [
+      "country" => $order->get_billing_country(),
+      "firstName" => $order->get_billing_first_name(),
+      "lastName" => $order->get_billing_last_name(),
+      "phoneNumber" => $order->get_billing_phone(),
+      "address1" => $order->get_billing_address_1(),
+      "address2" => $order->get_billing_address_2(),
+      "postalCode" => $order->get_billing_postcode(),
+      "locality" => $order->get_billing_city(),
+      "administrativeArea" => $order->get_billing_state(),
+      "buildingNumber" => $buildingNumberBill,
+      "email" => $order->get_billing_email(),
+    ];
+    $orderInformationBillTo = new CyberSource\Model\Ptsv2paymentsOrderInformationBillTo($orderInformationBillToArr);
 
-        $orderInformationArr = [
+    $orderInformationArr = [
             "amountDetails" => $orderInformationAmountDetails,
-            "billTo" => $orderInformationBillTo,
-        ];
-        $orderInformation = new Ptsv2paymentsOrderInformation($orderInformationArr);
+            "billTo" => $orderInformationBillTo
+    ];
+    $orderInformation = new CyberSource\Model\Ptsv2paymentsOrderInformation($orderInformationArr);
 
-        $tokenInformationArr = [
-            "transientTokenJwt" => $jwt,
-        ];
-        $tokenInformation = new Ptsv2paymentsTokenInformation($tokenInformationArr);
+    $tokenInformationArr = [
+            "transientTokenJwt" => $jwt
+    ];
+    $tokenInformation = new CyberSource\Model\Ptsv2paymentsTokenInformation($tokenInformationArr);
 
-        $requestObjArr = [
+    $requestObjArr = [
             "clientReferenceInformation" => $clientReferenceInformation,
             "orderInformation" => $orderInformation,
-            "tokenInformation" => $tokenInformation,
-        ];
-        $requestObj = new CreatePaymentRequest($requestObjArr);
+            "tokenInformation" => $tokenInformation
+    ];
+    $requestObj = new CyberSource\Model\CreatePaymentRequest($requestObjArr);
 
 
-        $commonElement = $this->commonElement;
-        $config = $commonElement->ConnectionHost();
-        $merchantConfig = $commonElement->merchantConfigObject();
+    $commonElement = $this->commonElement;
+    $config = $commonElement->ConnectionHost();
+    $merchantConfig = $commonElement->merchantConfigObject();
 
-        $api_client = new ApiClient($config, $merchantConfig);
-        $api_instance = new PaymentsApi($api_client);
+    $api_client = new CyberSource\ApiClient($config, $merchantConfig);
+    $api_instance = new CyberSource\Api\PaymentsApi($api_client);
 
-        try {
-            $apiResponse = $api_instance->createPayment($requestObj);
-            return $apiResponse;
-        } catch (ApiException $e) {
-            $errorCode = $e->getCode();
-
-            $this->nab_log('CyberSource API Exception', [
-                'message' => $e->getMessage(),
-                'response' => $e->getResponseBody(),
-                'code' => $e->getCode(),
-            ]);
-        }
-        return [];
+    try {
+        $apiResponse = $api_instance->createPayment($requestObj);
+        return $apiResponse;
+    } catch (Cybersource\ApiException $e) {
+        $errorCode = $e->getCode();
     }
+  }
+
+
 }
