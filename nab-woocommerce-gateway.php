@@ -74,6 +74,10 @@ function wc_nab_gateway_init()
     add_action('wp_ajax_nab_verify_payment', [WC_Gateway_NAB::get_instance(), 'nab_verify_payment']);
     // add_action('wp_ajax_nopriv_nab_get_capture_context', [WC_Gateway_NAB::get_instance(), 'ajax_get_capture_context']);
 
+
+    add_action(‘rest_api_init’, [WC_Gateway_NAB::get_instance(), 'nab_payment_endpoint'], 10, 1);
+
+
     add_filter('woocommerce_payment_gateways', function ($methods) {
         $methods[] = WC_Gateway_NAB::class;
         return $methods;

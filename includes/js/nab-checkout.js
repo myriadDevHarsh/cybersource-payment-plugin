@@ -65,8 +65,6 @@ jQuery(function ($) {
         }
       });
 
-
-      const completeResponse = await up.complete(tt);
       const verify = await $.ajax({
         url: nab_ajax.ajax_url,
         type: "POST",
@@ -75,7 +73,7 @@ jQuery(function ($) {
           action: "nab_verify_payment",
           _ajax_nonce: nab_ajax.nonce,
           order_id: nab_ajax.order_id,
-          jwt: completeResponse
+          jwt: tt
         }
       });
 

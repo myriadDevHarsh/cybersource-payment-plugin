@@ -68,6 +68,22 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
         $this->commonElement = new ExternalConfiguration(merchantID: $merchant_id, apiKeyID: $api_key, secretKey: $shared_secret, host: $host);
     }
 
+
+    public function nab_payment_endpoint(WP_REST_Server $wp_rest_server)
+    {
+        register_rest_route(
+            ‘nab / v1’,
+            ‘ / payment’,
+            [
+                ‘methods’ => "POST",
+                ‘callback’ => [$this,'nab_payment_update_status_hook'],
+                ‘permission_callback’ => ‘__return_true’,
+            ]
+        );
+    }
+
+    public function nab_payment_update_status_hook() {}
+
     public function get_base_url()
     {
         return "https://" . ($this->test_mode ? self::TEST_URL : self::PROD_URL);
@@ -165,6 +181,13 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
 
         $this->nab_log("nab payment logs", $res);
 
+        if ($res) {
+            // $this->updatePaymentStatus($res->id);
+            $payment_id = $res->id;
+            $order->set_transaction_id($payment_id);
+            $order->save();
+        }
+
         wp_send_json_success([
             'redirect' => $order->get_checkout_order_received_url(),
         ]);
@@ -193,7 +216,7 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
             'nab-checkout',
             plugin_dir_url(__FILE__) . 'js/nab-checkout.js',
             ['jquery'],
-            '1.1.2',
+            '1.1.4',
             true,
         );
         $order_id = $_GET['order_id'];
@@ -357,7 +380,7 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
         );
     }
 
-    private function PaymentWithFlexToken($jwt, $order)
+    private function PaymentWithFlexToken($jwt, $order): object|bool
     {
 
         $totalAmount = number_format((float) $order->get_total(), 2, '.', '');
@@ -422,8 +445,10 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
         $api_instance = new PaymentsApi($api_client);
 
         try {
-            $apiResponse = $api_instance->createPayment($requestObj);
-            return $apiResponse;
+            [$apiResponse,$status] = $api_instance->createPayment($requestObj);
+            if ($status == 201) {
+                return $apiResponse;
+            }
         } catch (ApiException $e) {
             $errorCode = $e->getCode();
 
@@ -433,6 +458,9 @@ class WC_Gateway_NAB extends WC_Payment_Gateway
                 'code' => $e->getCode(),
             ]);
         }
-        return [];
+        return false;
     }
+
+    //TODO:  set up a webhook for checking a payment is completed or failed
+    private function updatePaymentStatus($id): void {}
 }
